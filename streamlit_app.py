@@ -16,7 +16,7 @@ def fetch_conversion_factor(source, target):
             ex_s=data['rates'][source]
             ex_t=data['rates'][target]
             ex_c=ex_s/ex_t
-            print(ex_c)
+            # print(ex_c)
             return ex_c
     return None
 
@@ -35,7 +35,7 @@ def main():
             if cf is not None:
                 
                 final_amount = amount * cf
-                response_text += "{} {} is {} {}\n".format(amount, source_currency, final_amount, target_currency)
+                response_text += "{} {} is {} {}\n".format(amount,target_currency , final_amount, source_currency)
             else:
                 response_text += f"Error: Unable to fetch conversion factor for {source_currency} to {target_currency}\n"
         
